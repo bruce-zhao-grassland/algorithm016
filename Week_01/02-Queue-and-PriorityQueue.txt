@@ -1,0 +1,27 @@
+1. Queue是一个接口，Queue extends Collection
+	Queuet提供的方法：
+	(1)队头插入
+		boolean add(E); 插入不了抛异常
+		boolean offer(E);插入不了返回false
+	(2)获取并删除队头元素
+		E remove();删除不了抛异常
+		E poll();删除不了得到null
+	(3)获取队头元素
+		E element();获取不了抛异常
+		E peek();获取不了得到null
+
+2. PriorityQueue<E>，优先队列，
+	泛型元素E，要么实现了Comparable接口，要么提供一个比较器Comparator
+	PriorityQueue extends AbstractQueue,
+	AbstractQueue implements Queue。
+	所以PriorityQueue中实现了所有Queue的方法
+	
+	插入时，根据Compartor或Comparable比较权重
+	获取时，直接获取最大或最小元素
+	删除时，再堆排序，最值元素放到堆顶
+	
+	元素存储在 Object[] queue中，queue是一个balanced binary heap
+	queue[n] 的左右子节点若存在则为 queue[2*n+1]和queue[2(n+1)]
+	队列非空，最值存储在queue[0]中
+
+	
