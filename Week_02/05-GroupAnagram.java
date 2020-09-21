@@ -1,6 +1,6 @@
 class Solution {
 	// 字母异位词分组
-	// 字母排好序后，是字母异位词的得到相同的char[]
+	// 字母排好序后，是字母异位词的得到相同的char[]，生成String
 	// 使用Map，查找时间复杂度为O(1)
     public List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
