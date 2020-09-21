@@ -9,7 +9,7 @@
  */
 class Solution {
     /**
-     * Morris
+     * Morris，O(1)空间复杂度，O(n)时间复杂度
      */
     public List<Integer> inorderTraversal3(TreeNode root) {
         List<Integer> sortedList = new ArrayList<>();
@@ -45,7 +45,8 @@ class Solution {
 	 * 2. 处理本层逻辑
 	 * 3. drill down
 	 * 4. reverse 本层状态
-	 * TIPs：使用递归实现简单，先写退出条件，占用内存更小
+	 * TIPs：使用递归实现简单
+	 * O(n)空间复杂度，O(n)时间复杂度
      */
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> sortedList = new ArrayList<>();
@@ -64,6 +65,7 @@ class Solution {
 
     /**
      * 用栈实现中序遍历二叉树
+	 * O(n)空间复杂度，O(n)时间复杂度
      */
     public List<Integer> inorderTraversal1(TreeNode root) {
         List<Integer> sortedList = new ArrayList<>();
